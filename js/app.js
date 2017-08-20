@@ -1,30 +1,32 @@
-'use strict';
+/* globals ko, $, google */
 
 var initialLocations = [
 	{
-		name: 'KR Market',
-		lat: 12.9660136,
-		long: 77.5937461
+		name: 'Delhi',
+		lat: 28.7041,
+		long: 77.1025
 	},
 	{
-		name: 'Cubbon Park',
-		lat: 12.9249032,
-		long: 77.6681013
+		name: 'Chennai',
+		lat: 13.0827,
+		long: 80.2707
 	},
 	{
-		name: 'Bangalore Central',
-		lat: 12.9501713,
-		long: 77.6094589
+		name: 'Bengaluru',
+		lat: 12.9716,
+		long: 77.5946
 	},
+
 	{
-		name: 'Lalbagh Botanical Garden',
-		lat: 12.9501713,
-		long:77.6094589
+		name: 'Hyderabad',
+		lat: 17.3850,
+		long: 78.4867
 	},
+
 	{
-		name: 'The Form',
-		lat: 12.9501713,
-		long: 77.6094589
+		name: 'Mumbai',
+		lat: 19.0760,
+		long: 72.8777
 	}
 ];
 
@@ -132,8 +134,8 @@ function AppViewModel() {
 	this.locationList = ko.observableArray([]);
 
 	map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 12,
-			center: {lat: 37.370, lng: -122.002}
+			zoom: 6,
+			center: {lat: 20.5937, lng: 78.9629}
 	});
 
 	// Foursquare API settings
